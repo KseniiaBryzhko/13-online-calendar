@@ -1,0 +1,66 @@
+/* підключення шрифтів */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@400;900&display=swap");
+
+/* видима частина вікна браузера */
+body {
+  padding: 0;
+  margin: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fbfbfb;
+  font-family: "Roboto", sans-serif;
+}
+
+/* основний контейнер */
+.wrapper {
+  background: white;
+  border-radius: 24px;
+  padding: 55px 100px;
+  box-shadow: 0px 2.3128px 39.3176px rgba(0, 0, 0, 0.25);
+  max-width: 660px;
+  /* налаштування грід */
+  display: grid;
+  grid-template-columns: repeat(7, minmax(60px, 1fr));
+  grid-gap: 30px;
+}
+
+/* налаштування кнопок-стрілок */
+.next,
+.previous {
+  background: none;
+  border: none;
+}
+
+/* назва місяця та його розміри в грід */
+.month {
+  grid-column: span 5;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  line-height: 32px;
+  font-size: 2rem;
+}
+
+/* дні тижня */
+.day-of-week {
+  font-weight: bold;
+}
+
+/* налаштування всіх дивів */
+div {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
+  font-size: 1.5rem;
+}
+
+.today {
+  background: #ffd200;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+}
